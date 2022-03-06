@@ -1,5 +1,10 @@
 let num1, num2, operator;
 let input = document.querySelector("#input");
+input.addEventListener("keypress", e => {
+        if (!/[0-9\./]+/.test(e.key)) { //PREVENTS FROM TYPING CHARACTERS WHICH ARE DIFFERENT THAN 0-9 AND .
+        e.preventDefault();
+    };
+});
 
 document.querySelectorAll(".number").forEach(number => {
     number.addEventListener("click", () => {
