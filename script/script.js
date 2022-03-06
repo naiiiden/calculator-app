@@ -1,37 +1,37 @@
 let num1, num2, operator;
 let input = document.querySelector("#input");
-let equals = document.querySelector("#equals");
-let numbers = document.querySelectorAll(".number");
-var operators = document.querySelectorAll(".operator");
-let reset = document.querySelector("#reset");
 
-numbers.forEach(number => {
+document.querySelectorAll(".number").forEach(number => {
     number.addEventListener("click", () => {
         input.value += number.textContent;
     });
 });
 
-operators.forEach(operate => {
+document.querySelectorAll(".operator").forEach(operate => {
     operate.addEventListener("click", () => {
-        num1 = parseFloat(input.value);
+        if (num1 === undefined) num1 = parseFloat(input.value);
         operator = operate.textContent;
         input.value = "";
     });
 });
 
-equals.addEventListener("click", () => {
+document.querySelector("#equals").addEventListener("click", () => {
     num2 = parseFloat(input.value);
     switch (operator) {
         case "+": input.value = num1 + num2; break;
         case "-": input.value = num1 - num2; break;
         case "*": input.value = num1 * num2; break;
-        case "/": input.value = num1 / num2; break;
+        case "/": input.value = num1 / num2; if (num2 === 0) input.value = undefined; break;
     }
 });
 
-reset.addEventListener("click", () => {
+document.querySelector("#reset").addEventListener("click", () => {
     num1 = undefined;
     num2 = undefined;
     operator = undefined;
+    input.value = "";
+});
+
+document.querySelector("#delete").addEventListener("click", () => {
     input.value = "";
 });
