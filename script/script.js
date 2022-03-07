@@ -25,7 +25,7 @@ document.querySelector("#equals").addEventListener("click", () => {
     switch (operator) {
         case "+": input.value = num1 + num2; break;
         case "-": input.value = num1 - num2; break;
-        case "*": input.value = num1 * num2; break;
+        case "x": input.value = num1 * num2; break;
         case "/": input.value = num1 / num2; if (num2 === 0) input.value = undefined; break;
     }
 });

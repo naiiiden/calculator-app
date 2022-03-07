@@ -8,26 +8,44 @@
   <title>Frontend Mentor | Calculator app</title>
 </head>
 <body>
-  <input type="text" autofocus name="number" value="" id="input">
-  <button id="add" class="operator">+</button>
-  <button id="substract" class="operator">-</button>
-  <button id="multiply" class="operator">*</button>
-  <button id="divide" class="operator">/</button>
-  <button id="equals">=</button>
-  <button id="zero" class="number">0</button>
-  <button id="one" class="number">1</button>
-  <button id="two" class="number">2</button>
-  <button id="three" class="number">3</button>
-  <button id="four" class="number">4</button>
-  <button id="five" class="number">5</button>
-  <button id="six" class="number">6</button>
-  <button id="seven" class="number">7</button>
-  <button id="eight" class="number">8</button>
-  <button id="nine" class="number">9</button>
-  <button id="float" class="number">.</button>
-  <button id="reset" class="reset">RESET</button>
-  <button id="delete" class="delete">DEL</button>
-
+  <main>
+    <header>
+      <h1>calc</h1>
+    </header>
+    <form action="">
+      <input type="text" autofocus name="number" value="" id="input" class="calculator_display">
+    </form>
+    <div class="keys_container">
+      <div class="keys_row">
+        <button id="seven" class="number key">7</button>
+        <button id="eight" class="number key">8</button>
+        <button id="nine" class="number key">9</button>
+        <button id="delete" class="delete key">DEL</button>
+      </div>
+      <div class="keys_row">
+        <button id="four" class="number key">4</button>
+        <button id="five" class="number key">5</button>
+        <button id="six" class="number key">6</button>
+        <button id="add" class="operator key">+</button>
+      </div>
+      <div class="keys_row">
+        <button id="one" class="number key">1</button>
+        <button id="two" class="number key">2</button>
+        <button id="three" class="number key">3</button>
+        <button id="substract" class="operator key">-</button>
+      </div>
+      <div class="keys_row">
+        <button id="float" class="number key">.</button>
+        <button id="zero" class="number key">0</button>
+        <button id="divide" class="operator key">/</button>
+        <button id="multiply" class="operator key">x</button>
+      </div>
+      <div class="reset_equals_container">
+        <button id="reset" class="reset">RESET</button>
+        <button id="equals" class="equals">=</button>
+      </div>
+    </div>
+  </main>
   <script src="script/script.js"></script>
 </body>
 </html>
