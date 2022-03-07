@@ -67,6 +67,9 @@ document.querySelector("#range").addEventListener("input", () => {
         document.querySelector(".equals").style.backgroundColor = "hsl(6, 63%, 50%)";
         document.querySelector(".equals").style.borderBottom = ".25rem solid hsl(6, 70%, 34%)";
         document.querySelector(".equals").style.color = "#fff";
+        document.querySelector("#range").classList.remove("range2");
+        document.querySelector("#range").classList.remove("range3");
+        document.querySelector("#range").classList.add("range");
     } else if (range.value == 2) {
         document.body.style.backgroundColor = "rgb(230, 230, 230)"; // main bg
         document.querySelector(".calculator_display").style.backgroundColor = "hsl(0, 0%, 93%)"; // calculator display
@@ -90,7 +93,9 @@ document.querySelector("#range").addEventListener("input", () => {
         document.querySelector(".equals").style.backgroundColor = "hsl(25, 98%, 40%)";
         document.querySelector(".equals").style.borderBottom = ".25rem solid hsl(25, 99%, 27%)";
         document.querySelector(".equals").style.color = "#fff";
-        
+        document.querySelector("#range").classList.remove("range");
+        document.querySelector("#range").classList.remove("range3");
+        document.querySelector("#range").classList.add("range2");
     } else if (range.value == 3) {
         document.body.style.backgroundColor = "hsl(268, 75%, 9%)"; // main bg
         document.querySelector(".calculator_display").style.backgroundColor = "hsl(268, 71%, 12%)"; // calculator  display
@@ -115,5 +120,8 @@ document.querySelector("#range").addEventListener("input", () => {
         document.querySelector(".equals").style.backgroundColor = "hsl(176, 100%, 44%)";
         document.querySelector(".equals").style.borderBottom = ".25rem solid hsl(177, 92%, 70%)";
         document.querySelector(".equals").style.color = "hsl(198, 20%, 13%)";
+        document.querySelector("#range").classList.remove("range");
+        document.querySelector("#range").classList.remove("range2");
+        document.querySelector("#range").classList.add("range3");
     }
 });
