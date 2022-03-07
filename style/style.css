@@ -91,6 +91,12 @@ main .keys_container .keys_row .key, main .keys_container .reset_equals_containe
   border-bottom: 0.25rem solid #b4a597;
 }
 
+main .keys_container .keys_row .key:active, main .keys_container .reset_equals_container .key:active, main .keys_container .reset_equals_container .reset:active, main .keys_container .reset_equals_container .equals:active {
+  border-bottom: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 main .keys_container .keys_row .delete, main .keys_container .reset_equals_container .delete, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
   background: #637097;
   color: white;
@@ -107,5 +113,30 @@ main .keys_container .reset_equals_container .reset, main .keys_container .reset
 main .keys_container .reset_equals_container .equals {
   background: #d03f2f;
   border-bottom: 0.25rem solid #93261a;
+}
+
+@media screen and (min-width: 768px) {
+  main header h1 {
+    font-size: 1.75rem;
+  }
+  main form .calculator_display {
+    width: 375px;
+    padding: 1.5rem;
+    font-size: 1.75rem;
+  }
+  main .keys_container {
+    width: 375px;
+  }
+  main .keys_container .keys_row .key, main .keys_container .reset_equals_container .key, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
+    width: 4.75rem;
+    height: 3.75rem;
+    font-size: 1.5rem;
+  }
+  main .keys_container .keys_row .delete, main .keys_container .reset_equals_container .delete, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
+    font-size: 1.1rem;
+  }
+  main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
+    width: 10.3rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
