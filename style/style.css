@@ -38,9 +38,54 @@ main {
   gap: 1rem;
 }
 
+main header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 main header h1 {
   color: white;
   font-size: 1.5rem;
+}
+
+main header .input_theme_index_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 1rem;
+}
+
+main header .input_theme_index_container span {
+  color: white;
+  font-size: .65rem;
+  margin-bottom: .3rem;
+}
+
+main header .input_theme_index_container .theme_index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main header .input_theme_index_container .theme_index span {
+  color: white;
 }
 
 main form .calculator_display {

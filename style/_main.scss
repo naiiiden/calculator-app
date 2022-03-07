@@ -5,10 +5,40 @@ main {
     gap: 1rem;
 
     header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
         h1 {
             color: $reset-del-equal-text-theme1;
             font-size: 1.5rem;
         }
+
+        .input_theme_index_container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            gap: 1rem;
+
+            span {
+                color: $reset-del-equal-text-theme1;
+                font-size: .65rem;
+                margin-bottom: .3rem;
+            }
+
+            .theme_index {
+                display: flex;
+                justify-content: space-between;
+
+                span {
+                    color: $reset-del-equal-text-theme1;
+                }
+            }
+        }
+
+        // .range {
+            
+        // }
     }
 
     form {
