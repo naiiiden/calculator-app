@@ -13,4 +13,4 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 ![scheme3](/design/theme3.png)
 
 ## Live Preview
-https://naiiiden.github.io/top-calculator/
+https://naiiiden.github.io/calculator-app/
