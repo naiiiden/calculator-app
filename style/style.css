@@ -139,4 +139,29 @@ main .keys_container .reset_equals_container .equals {
     width: 10.3rem;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  main header h1 {
+    font-size: 2rem;
+  }
+  main form .calculator_display {
+    width: 450px;
+    padding: 1.75rem;
+    font-size: 2rem;
+  }
+  main .keys_container {
+    width: 450px;
+  }
+  main .keys_container .keys_row .key, main .keys_container .reset_equals_container .key, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
+    width: 6rem;
+    height: 4rem;
+    font-size: 1.75rem;
+  }
+  main .keys_container .keys_row .delete, main .keys_container .reset_equals_container .delete, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
+    font-size: 1.15rem;
+  }
+  main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
+    width: 12.7rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
