@@ -193,3 +193,35 @@ if (localStorage.getItem("range", range.value) == 1) {
     document.querySelector("#range").classList.remove("range2");
     document.querySelector("#range").classList.add("range3");
 }
+
+document.addEventListener("keypress", (e) => {
+    switch (e.keyCode) {
+        case 13: num2 = parseFloat(input.value);
+        switch (operator) {
+            case "+": input.value = num1 + num2; break;
+            case "-": input.value = num1 - num2; break;
+            case "x": input.value = num1 * num2; break;
+            case "/": input.value = num1 / num2; if (num2 === 0) input.value = undefined; break;
+        }; break;
+        /*OPERATORS*/
+        case 42: operator = "x"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
+        case 43: operator = "+"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
+        case 45: operator = "-"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
+        case 47: operator = "/"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
+        /*NUMBERS*/
+        case 48: input.value += 0; break;
+        case 49: input.value += 1; break;
+        case 50: input.value += 2; break;
+        case 51: input.value += 3; break;
+        case 52: input.value += 4; break;
+        case 53: input.value += 5; break;
+        case 54: input.value += 6; break;
+        case 55: input.value += 7; break;
+        case 56: input.value += 8; break;
+        case 57: input.value += 9; break;
+        /*EQUALS*/
+        /*RESET AND DEL*/
+        case 99: num1 = undefined; num2 = undefined; operator = undefined; input.value = ""; break;
+        case 127: input.value = ""; break;
+    }
+});
