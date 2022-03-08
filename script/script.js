@@ -137,31 +137,6 @@ document.querySelector("#range").addEventListener("input", () => {
 // LOCAL STORAGE, I HAD TO APPLY ALL STYLES AGAIN IN ORDER TO START WORKING AGAIN
 if (localStorage.getItem("range", range.value) == 1) {
     range.value = 1;
-    document.body.style.backgroundColor = "hsl(222, 26%, 31%)"; // main bg
-    document.querySelector(".calculator_display").style.backgroundColor = "hsl(223, 31%, 20%)"; // calculator display
-    document.querySelector(".calculator_display").style.color = "#fff"; // calculator display color
-    document.querySelector(".input_theme_index_container span").style.color = "#fff"; // theme text color
-    document.querySelectorAll(".theme_index span").forEach(number => {
-        number.style.color = "#fff"; // numbers above the slider
-    });
-    document.querySelector("h1").style.color = "#fff"; // calc
-    document.querySelector(".keys_container").style.backgroundColor = "hsl(223, 31%, 20%)"; // keyboard bg
-    document.querySelectorAll(".key").forEach(key => {
-        key.style.backgroundColor = "hsl(30, 25%, 89%)"; // key bg
-        key.style.color = "hsl(221, 14%, 31%)"; // key color 
-        key.style.borderBottom = ".25rem solid hsl(28, 16%, 65%)"; // key bottom border 
-    });
-    document.querySelector(".delete").style.backgroundColor = "hsl(225, 21%, 49%)";
-    document.querySelector(".delete").style.borderBottom = ".25rem solid hsl(224, 28%, 35%)";
-    document.querySelector(".delete").style.color = "#fff";
-    document.querySelector(".reset").style.backgroundColor = "hsl(185, 42%, 37%)";
-    document.querySelector(".reset").style.borderBottom = ".25rem solid hsl(185, 58%, 25%)";
-    document.querySelector(".equals").style.backgroundColor = "hsl(6, 63%, 50%)";
-    document.querySelector(".equals").style.borderBottom = ".25rem solid hsl(6, 70%, 34%)";
-    document.querySelector(".equals").style.color = "#fff";
-    document.querySelector("#range").classList.remove("range2");
-    document.querySelector("#range").classList.remove("range3");
-    document.querySelector("#range").classList.add("range");
 } else if (localStorage.getItem("range", range.value) == 2) {
     range.value = 2;
     document.body.style.backgroundColor = "rgb(230, 230, 230)"; // main bg
