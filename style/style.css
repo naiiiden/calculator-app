@@ -203,9 +203,7 @@ main .keys_container .keys_row .key, main .keys_container .reset_equals_containe
 }
 
 main .keys_container .keys_row .key:active, main .keys_container .reset_equals_container .key:active, main .keys_container .reset_equals_container .reset:active, main .keys_container .reset_equals_container .equals:active {
-  border-bottom: none;
-  -webkit-transition: .3s;
-  transition: .3s;
+  border-bottom: none !important;
 }
 
 main .keys_container .keys_row .delete, main .keys_container .reset_equals_container .delete, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
