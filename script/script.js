@@ -30,6 +30,7 @@ document.querySelector("#equals").addEventListener("click", () => {
         case "-": input.value = num1 - num2; num1 -= num2; break;
         case "x": input.value = num1 * num2; num1 *= num2; break;
         case "/": input.value = num1 / num2; if (num2 === 0) input.value = undefined; num1 /= num2; break;
+        case "**": input.value = num1 ** num2; num1 **= num2; break;
     }
 });
 
@@ -204,12 +205,14 @@ document.addEventListener("keypress", (e) => {
             case "-": input.value = num1 - num2; break;
             case "x": input.value = num1 * num2; break;
             case "/": input.value = num1 / num2; if (num2 === 0) input.value = undefined; break;
+            case "**": input.value = num1 ** num2; break;
         }; break;
         /*OPERATORS*/
         case 42: operator = "x"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
         case 43: operator = "+"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
         case 45: operator = "-"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
         case 47: operator = "/"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
+        // case 94: operator = "**"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
         /*NUMBERS*/
         case 48: input.value += 0; break;
         case 49: input.value += 1; break;
@@ -223,6 +226,8 @@ document.addEventListener("keypress", (e) => {
         case 57: input.value += 9; break;
         /*EQUALS*/
         /*RESET AND DEL*/
+        // EXPONENTIATION OPERATOR IS HERE SO I DON'T BREAK THE CASE ORDER
+        case 94: operator = "**"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
         case 99: num1 = undefined; num2 = undefined; operator = undefined; input.value = ""; break;
         case 127: input.value = ""; break;
     }

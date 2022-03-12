@@ -209,7 +209,7 @@ main .keys_container .keys_row .key:active, main .keys_container .reset_equals_c
 main .keys_container .keys_row .delete, main .keys_container .reset_equals_container .delete, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
   background: #637097;
   color: white;
-  font-size: 1rem;
+  font-size: .9rem;
   border-bottom: 0.25rem solid #404e72;
 }
 
