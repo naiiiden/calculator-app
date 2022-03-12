@@ -23,12 +23,11 @@ document.querySelectorAll(".operator").forEach(operate => {
 document.querySelector("#equals").addEventListener("click", () => {
     num2 = parseFloat(input.value);
     switch (operator) {
-        case "+": input.value = num1 + num2; break;
-        case "-": input.value = num1 - num2; break;
-        case "x": input.value = num1 * num2; break;
-        case "/": input.value = num1 / num2; if (num2 === 0) input.value = undefined; break;
+        case "+": input.value = num1 + num2; num1 += num2; break;
+        case "-": input.value = num1 - num2; num1 -= num2; break;
+        case "x": input.value = num1 * num2; num1 *= num2; break;
+        case "/": input.value = num1 / num2; if (num2 === 0) input.value = undefined; num1 /= num2; break;
     }
-    // num1 += num2;
 });
 
 document.querySelector("#reset").addEventListener("click", () => {
