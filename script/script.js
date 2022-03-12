@@ -17,6 +17,9 @@ document.querySelectorAll(".operator").forEach(operate => {
         if (num1 === undefined) num1 = parseFloat(input.value);
         operator = operate.textContent;
         input.value = "";
+        if (operator === "√") {
+            input.value = Math.sqrt(num1);
+        }
     });
 });
 

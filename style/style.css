@@ -214,8 +214,6 @@ main .keys_container .keys_row .delete, main .keys_container .reset_equals_conta
 }
 
 main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
-  width: 7.725rem;
-  height: 3.5rem;
   border-bottom: 0.25rem solid #404e72;
 }
 
@@ -244,9 +242,6 @@ main .keys_container .reset_equals_container .equals {
   main .keys_container .keys_row .delete, main .keys_container .reset_equals_container .delete, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
     font-size: 1.1rem;
   }
-  main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
-    width: 10.3rem;
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -268,9 +263,6 @@ main .keys_container .reset_equals_container .equals {
   }
   main .keys_container .keys_row .delete, main .keys_container .reset_equals_container .delete, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
     font-size: 1.15rem;
-  }
-  main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
-    width: 12.7rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

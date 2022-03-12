@@ -152,8 +152,8 @@ main {
 
             .reset {
                 @extend .delete, .key;
-                width: 7.725rem;
-                height: 3.5rem;
+                // width: 7.725rem;
+                // height: 3.5rem;
                 border-bottom: .25rem solid $reset-del-shadow-theme1;
             }
 
@@ -199,7 +199,7 @@ main {
 
             .reset_equals_container {
                 .reset {
-                    width: 10.3rem;
+                    // width: 10.3rem;
                 }
             }
         }
@@ -239,7 +239,7 @@ main {
 
             .reset_equals_container {
                 .reset {
-                    width: 12.7rem;
+                    // width: 12.7rem;
                 }
             }
         }
