@@ -201,11 +201,11 @@ document.addEventListener("keypress", (e) => {
     switch (e.keyCode) {
         case 13: num2 = parseFloat(input.value);
         switch (operator) {
-            case "+": input.value = num1 + num2; break;
-            case "-": input.value = num1 - num2; break;
-            case "x": input.value = num1 * num2; break;
-            case "/": input.value = num1 / num2; if (num2 === 0) input.value = undefined; break;
-            case "**": input.value = num1 ** num2; break;
+            case "+": input.value = num1 + num2; num1 += num2; break;
+            case "-": input.value = num1 - num2; num1 -= num2; break;
+            case "x": input.value = num1 * num2; num1 *= num2; break;
+            case "/": input.value = num1 / num2; if (num2 === 0) input.value = undefined; num1 /= num2; break;
+            case "**": input.value = num1 ** num2; num1 **= num2; break;
         }; break;
         /*OPERATORS*/
         case 42: operator = "x"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
