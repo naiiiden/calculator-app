@@ -28,6 +28,11 @@ body {
   transition: .2s;
 }
 
+button {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
 main {
   padding: 1rem;
   display: -webkit-box;
