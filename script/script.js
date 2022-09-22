@@ -12,15 +12,10 @@ document.querySelectorAll(".operator").forEach(operate => {
         if (num1 === undefined) num1 = parseFloat(input.textContent);
         operator = operate.textContent;
         input.textContent += operator;
-        if (operator === "√") {
-            input.textContent = Math.sqrt(num1);
-            // num1 = 
-        }
     });
 });
 
 document.querySelector("#equals").addEventListener("click", () => {
-    // num2 = parseFloat(input.textContent); 
     num2 = parseFloat(input.textContent.substring(input.textContent.indexOf(operator) + 1));
     
     switch (operator) {
@@ -29,8 +24,6 @@ document.querySelector("#equals").addEventListener("click", () => {
         case "x": input.textContent = num1 * num2; num1 *= num2; break;
         case "/": input.textContent = num1 / num2; if (num2 === 0) input.textContent = undefined; num1 /= num2; break;
         case "^": input.textContent = num1 ** num2; num1 **= num2; break;
-        // case "√": input.textContent = Math.sqrt(num1); num1 = Math.sqrt(num1); break;
-        // case "√": num1 = input.textContent;
     }
 });
 
@@ -42,7 +35,6 @@ document.querySelector("#reset").addEventListener("click", () => {
 });
 
 document.querySelector("#delete").addEventListener("click", () => {
-    // input.textContent = "";
     input.textContent = input.textContent.substring(0, input.textContent.length - 1);
 });
 
@@ -200,7 +192,6 @@ if (localStorage.getItem("range", range.value) == 1) {
 
 document.addEventListener("keypress", (e) => {
     switch (e.keyCode) {
-        // case 13: num2 = parseFloat(input.textContent);
         case 13: num2 = parseFloat(input.textContent.substring(input.textContent.indexOf(operator) + 1));
         switch (operator) {
             case "+": input.textContent = num1 + num2; num1 += num2; break;

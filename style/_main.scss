@@ -156,6 +156,7 @@ main {
 
             .equals {
                 @extend .reset;
+                width: 7.625rem;
                 background: $equal-keybg-togglebg-theme1;
                 border-bottom: .25rem solid $equal-shadow-theme1;
             }
@@ -192,6 +193,12 @@ main {
                     font-size: 1.1rem;
                 }
             }
+
+            .reset_equals_container {
+                .equals {
+                    width: 10.25rem;
+                }
+            }
         }
     }
 }
@@ -223,6 +230,12 @@ main {
 
                 .delete {
                     font-size: 1.15rem;
+                }
+            }
+
+            .reset_equals_container {
+                .equals {
+                    width: 12.7125rem;
                 }
             }
         }
