@@ -199,19 +199,20 @@ if (localStorage.getItem("range", range.value) == 1) {
 
 document.addEventListener("keypress", (e) => {
     switch (e.keyCode) {
-        case 13: num2 = parseFloat(input.textContent);
+        // case 13: num2 = parseFloat(input.textContent);
+        case 13: num2 = parseFloat(input.textContent.substring(input.textContent.indexOf(operator) + 1));
         switch (operator) {
             case "+": input.textContent = num1 + num2; num1 += num2; break;
             case "-": input.textContent = num1 - num2; num1 -= num2; break;
             case "x": input.textContent = num1 * num2; num1 *= num2; break;
             case "/": input.textContent = num1 / num2; if (num2 === 0) input.textContent = undefined; num1 /= num2; break;
-            case "**": input.textContent = num1 ** num2; num1 **= num2; break;
+            case "^": input.textContent = num1 ** num2; num1 **= num2; break;
         }; break;
         /*OPERATORS*/
-        case 42: operator = "x"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent = ""; break;
-        case 43: operator = "+"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent = ""; break;
-        case 45: operator = "-"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent = ""; break;
-        case 47: operator = "/"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent = ""; break;
+        case 42: operator = "x"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent += operator; break;
+        case 43: operator = "+"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent += operator; break;
+        case 45: operator = "-"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent += operator; break;
+        case 47: operator = "/"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent += operator; break;
         /*NUMBERS*/
         case 48: input.textContent += 0; break;
         case 49: input.textContent += 1; break;
@@ -226,7 +227,7 @@ document.addEventListener("keypress", (e) => {
         /*EQUALS*/
         /*RESET AND DEL*/
         // EXPONENTIATION OPERATOR IS HERE SO I DON'T BREAK THE CASE ORDER
-        case 94: operator = "**"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent = ""; break;
+        case 94: operator = "^"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent += operator; break;
         case 99: num1 = undefined; num2 = undefined; operator = undefined; input.textContent = ""; break;
         case 127: input.textContent = ""; break;
     }
