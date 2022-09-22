@@ -99,8 +99,9 @@ main header .range3::-webkit-slider-thumb {
 main header .range3::-webkit-slider-runnable-track {
   background: hsl(268deg, 71%, 12%);
 }
-main form .calculator_display {
+main .calculator_display {
   width: 288px;
+  height: 61px;
   background-color: hsl(223deg, 31%, 20%);
   border: none;
   color: hsl(0deg, 0%, 100%);
@@ -155,8 +156,9 @@ main .keys_container .reset_equals_container .equals {
   main header h1 {
     font-size: 1.75rem;
   }
-  main form .calculator_display {
+  main .calculator_display {
     width: 375px;
+    height: 81px;
     padding: 1.5rem;
     font-size: 1.75rem;
   }
@@ -176,8 +178,9 @@ main .keys_container .reset_equals_container .equals {
   main header h1 {
     font-size: 2rem;
   }
-  main form .calculator_display {
+  main .calculator_display {
     width: 450px;
+    height: 94px;
     padding: 1.75rem;
     font-size: 2rem;
   }

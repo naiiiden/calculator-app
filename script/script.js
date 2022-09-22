@@ -8,29 +8,29 @@ input.addEventListener("keypress", e => {
 
 document.querySelectorAll(".number").forEach(number => {
     number.addEventListener("click", () => {
-        input.value += number.textContent;
+        input.textContent += number.textContent;
     });
 });
 
 document.querySelectorAll(".operator").forEach(operate => {
     operate.addEventListener("click", () => {
-        if (num1 === undefined) num1 = parseFloat(input.value);
+        if (num1 === undefined) num1 = parseFloat(input.textContent);
         operator = operate.textContent;
-        input.value = "";
+        input.textContent = "";
         if (operator === "√") {
-            input.value = Math.sqrt(num1);
+            input.textContent = Math.sqrt(num1);
         }
     });
 });
 
 document.querySelector("#equals").addEventListener("click", () => {
-    num2 = parseFloat(input.value);
+    num2 = parseFloat(input.textContent);
     switch (operator) {
-        case "+": input.value = num1 + num2; num1 += num2; break;
-        case "-": input.value = num1 - num2; num1 -= num2; break;
-        case "x": input.value = num1 * num2; num1 *= num2; break;
-        case "/": input.value = num1 / num2; if (num2 === 0) input.value = undefined; num1 /= num2; break;
-        case "**": input.value = num1 ** num2; num1 **= num2; break;
+        case "+": input.textContent = num1 + num2; num1 += num2; break;
+        case "-": input.textContent = num1 - num2; num1 -= num2; break;
+        case "x": input.textContent = num1 * num2; num1 *= num2; break;
+        case "/": input.textContent = num1 / num2; if (num2 === 0) input.textContent = undefined; num1 /= num2; break;
+        case "**": input.textContent = num1 ** num2; num1 **= num2; break;
     }
 });
 
@@ -38,11 +38,11 @@ document.querySelector("#reset").addEventListener("click", () => {
     num1 = undefined;
     num2 = undefined;
     operator = undefined;
-    input.value = "";
+    input.textContent = "";
 });
 
 document.querySelector("#delete").addEventListener("click", () => {
-    input.value = "";
+    input.textContent = "";
 });
 
 /* COLOR SCHEME SLIDER */
@@ -199,36 +199,36 @@ if (localStorage.getItem("range", range.value) == 1) {
 
 document.addEventListener("keypress", (e) => {
     switch (e.keyCode) {
-        case 13: num2 = parseFloat(input.value);
+        case 13: num2 = parseFloat(input.textContent);
         switch (operator) {
-            case "+": input.value = num1 + num2; num1 += num2; break;
-            case "-": input.value = num1 - num2; num1 -= num2; break;
-            case "x": input.value = num1 * num2; num1 *= num2; break;
-            case "/": input.value = num1 / num2; if (num2 === 0) input.value = undefined; num1 /= num2; break;
-            case "**": input.value = num1 ** num2; num1 **= num2; break;
+            case "+": input.textContent = num1 + num2; num1 += num2; break;
+            case "-": input.textContent = num1 - num2; num1 -= num2; break;
+            case "x": input.textContent = num1 * num2; num1 *= num2; break;
+            case "/": input.textContent = num1 / num2; if (num2 === 0) input.textContent = undefined; num1 /= num2; break;
+            case "**": input.textContent = num1 ** num2; num1 **= num2; break;
         }; break;
         /*OPERATORS*/
-        case 42: operator = "x"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
-        case 43: operator = "+"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
-        case 45: operator = "-"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
-        case 47: operator = "/"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
+        case 42: operator = "x"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent = ""; break;
+        case 43: operator = "+"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent = ""; break;
+        case 45: operator = "-"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent = ""; break;
+        case 47: operator = "/"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent = ""; break;
         // case 94: operator = "**"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
         /*NUMBERS*/
-        case 48: input.value += 0; break;
-        case 49: input.value += 1; break;
-        case 50: input.value += 2; break;
-        case 51: input.value += 3; break;
-        case 52: input.value += 4; break;
-        case 53: input.value += 5; break;
-        case 54: input.value += 6; break;
-        case 55: input.value += 7; break;
-        case 56: input.value += 8; break;
-        case 57: input.value += 9; break;
+        case 48: input.textContent += 0; break;
+        case 49: input.textContent += 1; break;
+        case 50: input.textContent += 2; break;
+        case 51: input.textContent += 3; break;
+        case 52: input.textContent += 4; break;
+        case 53: input.textContent += 5; break;
+        case 54: input.textContent += 6; break;
+        case 55: input.textContent += 7; break;
+        case 56: input.textContent += 8; break;
+        case 57: input.textContent += 9; break;
         /*EQUALS*/
         /*RESET AND DEL*/
         // EXPONENTIATION OPERATOR IS HERE SO I DON'T BREAK THE CASE ORDER
-        case 94: operator = "**"; if (num1 === undefined) num1 = parseFloat(input.value); input.value = ""; break;
-        case 99: num1 = undefined; num2 = undefined; operator = undefined; input.value = ""; break;
-        case 127: input.value = ""; break;
+        case 94: operator = "**"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent = ""; break;
+        case 99: num1 = undefined; num2 = undefined; operator = undefined; input.textContent = ""; break;
+        case 127: input.textContent = ""; break;
     }
 });

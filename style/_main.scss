@@ -96,9 +96,10 @@ main {
         }
     }
 
-    form {
+    // form {
         .calculator_display {
             width: 288px;
+            height: 61px;
             background-color: $keypad-toggle-background-theme1;
             border: none;
             color: $equal-text-theme1;
@@ -108,7 +109,7 @@ main {
             font-size: 1.5rem;
             border-radius: .5rem;
         }
-    }
+    // }
 
     .keys_container {
         background-color: $keypad-toggle-background-theme1;
@@ -174,13 +175,14 @@ main {
             }
         }
 
-        form {
+        // form {
             .calculator_display {
                 width: 375px;
+                height: 81px;
                 padding: 1.5rem;
                 font-size: 1.75rem;
             }
-        }
+        // }
 
         .keys_container {
             width: 375px;
@@ -214,13 +216,14 @@ main {
             }
         }
 
-        form {
+        // form {
             .calculator_display {
                 width: 450px;
+                height: 94px;
                 padding: 1.75rem;
                 font-size: 2rem;
             }
-        }
+        // }
 
         .keys_container {
             width: 450px;
