@@ -96,20 +96,18 @@ main {
         }
     }
 
-    // form {
-        .calculator_display {
-            width: 288px;
-            height: 61px;
-            background-color: $keypad-toggle-background-theme1;
-            border: none;
-            color: $equal-text-theme1;
-            font-family: Spartan, sans-serif;
-            text-align: right;
-            padding: 1rem;
-            font-size: 1.5rem;
-            border-radius: .5rem;
-        }
-    // }
+    .calculator_display {
+        width: 288px;
+        height: 61px;
+        background-color: $keypad-toggle-background-theme1;
+        border: none;
+        color: $equal-text-theme1;
+        font-family: Spartan, sans-serif;
+        text-align: right;
+        padding: 1rem;
+        font-size: 1.5rem;
+        border-radius: .5rem;
+    }
 
     .keys_container {
         background-color: $keypad-toggle-background-theme1;
@@ -153,8 +151,6 @@ main {
 
             .reset {
                 @extend .delete, .key;
-                // width: 7.725rem;
-                // height: 3.5rem;
                 border-bottom: .25rem solid $reset-del-shadow-theme1;
             }
 
@@ -175,14 +171,12 @@ main {
             }
         }
 
-        // form {
-            .calculator_display {
-                width: 375px;
-                height: 81px;
-                padding: 1.5rem;
-                font-size: 1.75rem;
-            }
-        // }
+        .calculator_display {
+            width: 375px;
+            height: 81px;
+            padding: 1.5rem;
+            font-size: 1.75rem;
+        }
 
         .keys_container {
             width: 375px;
@@ -198,12 +192,6 @@ main {
                     font-size: 1.1rem;
                 }
             }
-
-            .reset_equals_container {
-                .reset {
-                    // width: 10.3rem;
-                }
-            }
         }
     }
 }
@@ -216,14 +204,12 @@ main {
             }
         }
 
-        // form {
-            .calculator_display {
-                width: 450px;
-                height: 94px;
-                padding: 1.75rem;
-                font-size: 2rem;
-            }
-        // }
+        .calculator_display {
+            width: 450px;
+            height: 94px;
+            padding: 1.75rem;
+            font-size: 2rem;
+        }
 
         .keys_container {
             width: 450px;
@@ -237,12 +223,6 @@ main {
 
                 .delete {
                     font-size: 1.15rem;
-                }
-            }
-
-            .reset_equals_container {
-                .reset {
-                    // width: 12.7rem;
                 }
             }
         }
