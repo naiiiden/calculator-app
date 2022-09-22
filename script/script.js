@@ -42,7 +42,8 @@ document.querySelector("#reset").addEventListener("click", () => {
 });
 
 document.querySelector("#delete").addEventListener("click", () => {
-    input.textContent = "";
+    // input.textContent = "";
+    input.textContent = input.textContent.substring(0, input.textContent.length - 1);
 });
 
 /* COLOR SCHEME SLIDER */
