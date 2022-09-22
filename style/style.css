@@ -5,8 +5,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,219 +13,142 @@ body {
   min-height: 100vh;
   font-family: Spartan, sans-serif;
   font-weight: 700;
-  background-color: #3a4764;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: hsl(222deg, 26%, 31%);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: .2s;
-  transition: .2s;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
 }
 
 button {
-  -webkit-transition: .2s;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 main {
   padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 1rem;
 }
-
 main header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-
 main header h1 {
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   font-size: 1.5rem;
 }
-
 main header .input_theme_index_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-direction: row;
+  align-items: flex-end;
   gap: 1rem;
 }
-
-main header .input_theme_index_container span {
-  color: white;
-  font-size: .65rem;
+main header .input_theme_index_container .theme-label {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.65rem;
 }
-
 main header .input_theme_index_container .theme_index {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 main header .input_theme_index_container .theme_index span {
-  color: white;
-  margin-bottom: .25rem;
+  color: hsl(0deg, 0%, 100%);
+  margin-bottom: 0.25rem;
 }
-
 main header .input_theme_index_container .theme_text_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 main header .input_theme_index_container .theme_text_container div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   gap: 1.35rem;
 }
-
-main header .range, main header .range2, main header .range3 {
+main header .range, main header .range3, main header .range2 {
   width: 4rem;
   height: 1rem;
   -webkit-appearance: none;
   background: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
-main header .range::-webkit-slider-thumb, main header .range2::-webkit-slider-thumb, main header .range3::-webkit-slider-thumb {
+main header .range::-webkit-slider-thumb, main header .range3::-webkit-slider-thumb, main header .range2::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 2em;
-  background: #d03f2f;
+  background: hsl(6deg, 63%, 50%);
 }
-
-main header .range::-webkit-slider-runnable-track, main header .range2::-webkit-slider-runnable-track, main header .range3::-webkit-slider-runnable-track {
+main header .range::-webkit-slider-runnable-track, main header .range3::-webkit-slider-runnable-track, main header .range2::-webkit-slider-runnable-track {
   height: 1.25rem;
   border-radius: 2rem;
-  background: #232c43;
+  background: hsl(223deg, 31%, 20%);
 }
-
 main header .range2::-webkit-slider-thumb {
-  background: #ca5502;
+  background: hsl(25deg, 98%, 40%);
 }
-
 main header .range2::-webkit-slider-runnable-track {
-  background: #d1cccc;
+  background: hsl(0deg, 5%, 81%);
 }
-
 main header .range3::-webkit-slider-thumb {
-  background: #00e0d1;
+  background: hsl(176deg, 100%, 44%);
 }
-
 main header .range3::-webkit-slider-runnable-track {
-  background: #1d0934;
+  background: hsl(268deg, 71%, 12%);
 }
-
 main form .calculator_display {
   width: 288px;
-  background-color: #232c43;
+  background-color: hsl(223deg, 31%, 20%);
   border: none;
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   font-family: Spartan, sans-serif;
   text-align: right;
   padding: 1rem;
   font-size: 1.5rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
-
 main .keys_container {
-  background-color: #232c43;
-  border-radius: .5rem;
+  background-color: hsl(223deg, 31%, 20%);
+  border-radius: 0.5rem;
   padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: .75rem;
+  flex-direction: column;
+  gap: 0.75rem;
   width: 288px;
 }
-
 main .keys_container .keys_row, main .keys_container .reset_equals_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 main .keys_container .keys_row .key, main .keys_container .reset_equals_container .key, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
   width: 3.5rem;
   height: 3.5rem;
   font-family: inherit;
-  color: #444b5a;
-  background: #eae3dc;
+  color: hsl(221deg, 14%, 31%);
+  background: hsl(30deg, 25%, 89%);
   border: none;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   font-size: 1.25rem;
-  border-bottom: 0.25rem solid #b4a597;
+  border-bottom: 0.25rem solid hsl(28deg, 16%, 65%);
 }
-
 main .keys_container .keys_row .key:active, main .keys_container .reset_equals_container .key:active, main .keys_container .reset_equals_container .reset:active, main .keys_container .reset_equals_container .equals:active {
   border-bottom: none !important;
 }
-
 main .keys_container .keys_row .delete, main .keys_container .reset_equals_container .delete, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
-  background: #637097;
-  color: white;
-  font-size: .9rem;
-  border-bottom: 0.25rem solid #404e72;
+  background: hsl(225deg, 21%, 49%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.9rem;
+  border-bottom: 0.25rem solid hsl(224deg, 28%, 35%);
 }
-
 main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
-  border-bottom: 0.25rem solid #404e72;
+  border-bottom: 0.25rem solid hsl(224deg, 28%, 35%);
 }
-
 main .keys_container .reset_equals_container .equals {
-  background: #d03f2f;
-  border-bottom: 0.25rem solid #93261a;
+  background: hsl(6deg, 63%, 50%);
+  border-bottom: 0.25rem solid hsl(6deg, 70%, 34%);
 }
 
 @media screen and (min-width: 768px) {
@@ -250,7 +172,6 @@ main .keys_container .reset_equals_container .equals {
     font-size: 1.1rem;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main header h1 {
     font-size: 2rem;
@@ -271,5 +192,4 @@ main .keys_container .reset_equals_container .equals {
   main .keys_container .keys_row .delete, main .keys_container .reset_equals_container .delete, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
     font-size: 1.15rem;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

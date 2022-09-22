@@ -20,7 +20,7 @@ main {
             align-items: flex-end;
             gap: 1rem;
 
-            span {
+            .theme-label {
                 color: $reset-del-equal-text-theme1;
                 font-size: .65rem;
             }

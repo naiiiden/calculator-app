@@ -51,7 +51,7 @@ document.querySelector("#range").addEventListener("input", () => {
         document.body.style.backgroundColor = "hsl(222, 26%, 31%)"; // main bg
         document.querySelector(".calculator_display").style.backgroundColor = "hsl(223, 31%, 20%)"; // calculator display
         document.querySelector(".calculator_display").style.color = "#fff"; // calculator display color
-        document.querySelector(".input_theme_index_container span").style.color = "#fff"; // theme text color
+        document.querySelector(".input_theme_index_container .theme-label").style.color = "#fff"; // theme text color
         document.querySelectorAll(".theme_index span").forEach(number => {
             number.style.color = "#fff"; // numbers above the slider
         });
@@ -80,7 +80,7 @@ document.querySelector("#range").addEventListener("input", () => {
         document.body.style.backgroundColor = "rgb(230, 230, 230)"; // main bg
         document.querySelector(".calculator_display").style.backgroundColor = "hsl(0, 0%, 93%)"; // calculator display
         document.querySelector(".calculator_display").style.color = "hsl(60, 10%, 19%)"; // calculator display color
-        document.querySelector(".input_theme_index_container span").style.color = "hsl(60, 10%, 19%)"; // theme text color
+        document.querySelector(".input_theme_index_container .theme-label").style.color = "hsl(60, 10%, 19%)"; // theme text color
         document.querySelectorAll(".theme_index span").forEach(number => {
             number.style.color = "hsl(60, 10%, 19%)"; // numbers above the slider
         });
@@ -109,7 +109,7 @@ document.querySelector("#range").addEventListener("input", () => {
         document.body.style.backgroundColor = "hsl(268, 75%, 9%)"; // main bg
         document.querySelector(".calculator_display").style.backgroundColor = "hsl(268, 71%, 12%)"; // calculator  display
         document.querySelector(".calculator_display").style.color = "hsl(52, 100%, 62%)"; // calculator display color
-        document.querySelector(".input_theme_index_container span").style.color = "hsl(52, 100%, 62%)"; // theme text color
+        document.querySelector(".input_theme_index_container .theme-label").style.color = "hsl(52, 100%, 62%)"; // theme text color
         document.querySelectorAll(".theme_index span").forEach(number => {
             number.style.color = "hsl(52, 100%, 62%)"; // numbers above the slider
         });
@@ -145,7 +145,7 @@ if (localStorage.getItem("range", range.value) == 1) {
     document.body.style.backgroundColor = "rgb(230, 230, 230)"; // main bg
     document.querySelector(".calculator_display").style.backgroundColor = "hsl(0, 0%, 93%)"; // calculator display
     document.querySelector(".calculator_display").style.color = "hsl(60, 10%, 19%)"; // calculator display color
-    document.querySelector(".input_theme_index_container span").style.color = "hsl(60, 10%, 19%)"; // theme text color
+    document.querySelector(".input_theme_index_container .theme-label").style.color = "hsl(60, 10%, 19%)"; // theme text color
     document.querySelectorAll(".theme_index span").forEach(number => {
         number.style.color = "hsl(60, 10%, 19%)"; // numbers above the slider
     });
@@ -172,7 +172,7 @@ if (localStorage.getItem("range", range.value) == 1) {
     document.body.style.backgroundColor = "hsl(268, 75%, 9%)"; // main bg
     document.querySelector(".calculator_display").style.backgroundColor = "hsl(268, 71%, 12%)"; // calculator  display
     document.querySelector(".calculator_display").style.color = "hsl(52, 100%, 62%)"; // calculator display color
-    document.querySelector(".input_theme_index_container span").style.color = "hsl(52, 100%, 62%)"; // theme text color
+    document.querySelector(".input_theme_index_container .theme-label").style.color = "hsl(52, 100%, 62%)"; // theme text color
     document.querySelectorAll(".theme_index span").forEach(number => {
         number.style.color = "hsl(52, 100%, 62%)"; // numbers above the slider
     });
