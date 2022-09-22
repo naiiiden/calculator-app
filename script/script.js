@@ -28,7 +28,7 @@ document.querySelector("#equals").addEventListener("click", () => {
         case "-": input.textContent = num1 - num2; num1 -= num2; break;
         case "x": input.textContent = num1 * num2; num1 *= num2; break;
         case "/": input.textContent = num1 / num2; if (num2 === 0) input.textContent = undefined; num1 /= num2; break;
-        case "**": input.textContent = num1 ** num2; num1 **= num2; break;
+        case "^": input.textContent = num1 ** num2; num1 **= num2; break;
         // case "√": input.textContent = Math.sqrt(num1); num1 = Math.sqrt(num1); break;
         // case "√": num1 = input.textContent;
     }
