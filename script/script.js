@@ -1,6 +1,5 @@
 let num1, num2, operator;
 let input = document.querySelector("#input");
-
 const rangeSlider = document.querySelector("#range");
 const deleteBtn = document.querySelector(".delete");
 const resetBtn = document.querySelector(".reset");
@@ -49,153 +48,35 @@ deleteBtn.addEventListener("click", () => {
 /* COLOR SCHEME SLIDER */
 range.addEventListener("input", () => {
     if (range.value == 1) {
-        document.body.style.backgroundColor = "hsl(222, 26%, 31%)"; // main bg
-        calcDisplay.style.backgroundColor = "hsl(223, 31%, 20%)"; // calculator display
-        calcDisplay.style.color = "#fff"; // calculator display color
-        themeLabel.style.color = "#fff"; // theme text color
-        rangeNumber.forEach(number => {
-            number.style.color = "#fff"; // numbers above the slider
-        });
-        document.querySelector("h1").style.color = "#fff"; // calc
-        document.querySelector(".keys_container").style.backgroundColor = "hsl(223, 31%, 20%)"; // keyboard bg
-        document.querySelectorAll(".key").forEach(key => {
-            key.style.backgroundColor = "hsl(30, 25%, 89%)"; // key bg
-            key.style.color = "hsl(221, 14%, 31%)"; // key color 
-            key.style.borderBottom = ".25rem solid hsl(28, 16%, 65%)"; // key bottom border 
-        });
-        deleteBtn.style.backgroundColor = "hsl(225, 21%, 49%)";
-        deleteBtn.style.borderBottom = ".25rem solid hsl(224, 28%, 35%)";
-        deleteBtn.style.color = "#fff";
-        resetBtn.style.backgroundColor = "hsl(225, 21%, 49%)";
-        resetBtn.style.borderBottom = ".25rem solid hsl(224, 28%, 35%)";
-        equalsBtn.style.backgroundColor = "hsl(6, 63%, 50%)";
-        equalsBtn.style.borderBottom = ".25rem solid hsl(6, 70%, 34%)";
-        equalsBtn.style.color = "#fff";
-        range.classList.remove("range2");
-        range.classList.remove("range3");
-        range.classList.add("range");
+        document.body.classList.add("theme-one");
+        document.body.classList.remove("theme-two", "theme-three");
         // SET LOCALSTORAGE
         localStorage.setItem("range", range.value);
 
     } else if (range.value == 2) {
-        document.body.style.backgroundColor = "rgb(230, 230, 230)"; // main bg
-        calcDisplay.style.backgroundColor = "hsl(0, 0%, 93%)"; // calculator display
-        calcDisplay.style.color = "hsl(60, 10%, 19%)"; // calculator display color
-        themeLabel.style.color = "hsl(60, 10%, 19%)"; // theme text color
-        rangeNumber.forEach(number => {
-            number.style.color = "hsl(60, 10%, 19%)"; // numbers above the slider
-        });
-        document.querySelector("h1").style.color = "hsl(60, 10%, 19%)"; // calc
-        document.querySelector(".keys_container").style.backgroundColor = "hsl(0, 5%, 81%)"; // keyboard bg
-        document.querySelectorAll(".key").forEach(key => {
-            key.style.backgroundColor = "hsl(45, 7%, 89%)"; // key bg
-            key.style.color = "hsl(60, 10%, 19%)"; // key color
-            key.style.borderBottom = ".25rem solid hsl(35, 11%, 61%)";
-        });
-        deleteBtn.style.backgroundColor = "hsl(185, 42%, 37%)";
-        deleteBtn.style.color = "#fff";
-        deleteBtn.style.borderBottom = ".25rem solid hsl(185, 58%, 25%)";
-        resetBtn.style.backgroundColor = "hsl(185, 42%, 37%)";
-        resetBtn.style.borderBottom = ".25rem solid hsl(185, 58%, 25%)";
-        equalsBtn.style.backgroundColor = "hsl(25, 98%, 40%)";
-        equalsBtn.style.borderBottom = ".25rem solid hsl(25, 99%, 27%)";
-        equalsBtn.style.color = "#fff";
-        range.classList.remove("range");
-        range.classList.remove("range3");
-        range.classList.add("range2");
+        document.body.classList.add("theme-two");
+        document.body.classList.remove("theme-one", "theme-three");
         // SET LOCALSTORAGE
         localStorage.setItem("range", range.value);
     
     } else if (range.value == 3) {
-        document.body.style.backgroundColor = "hsl(268, 75%, 9%)"; // main bg
-        calcDisplay.style.backgroundColor = "hsl(268, 71%, 12%)"; // calculator  display
-        calcDisplay.style.color = "hsl(52, 100%, 62%)"; // calculator display color
-        themeLabel.style.color = "hsl(52, 100%, 62%)"; // theme text color
-        rangeNumber.forEach(number => {
-            number.style.color = "hsl(52, 100%, 62%)"; // numbers above the slider
-        });
-        document.querySelector("h1").style.color = "hsl(52, 100%, 62%)"; // calc
-        document.querySelector(".keys_container").style.backgroundColor = "hsl(268, 71%, 12%)"; // keyboard bg
-        document.querySelectorAll(".key").forEach(key => {
-            key.style.backgroundColor = "hsl(268, 47%, 21%)"; // key bg
-            key.style.color = "hsl(52, 100%, 62%)"; // key color
-            key.style.borderBottom = ".25rem solid hsl(290, 70%, 36%)";
-        });
-        deleteBtn.style.backgroundColor = "hsl(281, 89%, 26%)";
-        deleteBtn.style.borderBottom = ".25rem solid hsl(285, 91%, 52%)";
-        deleteBtn.style.color = "#fff";
-        resetBtn.style.backgroundColor = "hsl(281, 89%, 26%)";
-        resetBtn.style.borderBottom = ".25rem solid hsl(285, 91%, 52%)";
-        resetBtn.style.color = "#fff";
-        equalsBtn.style.backgroundColor = "hsl(176, 100%, 44%)";
-        equalsBtn.style.borderBottom = ".25rem solid hsl(177, 92%, 70%)";
-        equalsBtn.style.color = "hsl(198, 20%, 13%)";
-        range.classList.remove("range");
-        range.classList.remove("range2");
-        range.classList.add("range3");
+        document.body.classList.add("theme-three");
+        document.body.classList.remove("theme-one", "theme-two");
         // SET LOCALSTORAGE
         localStorage.setItem("range", range.value);
     }
 });
 
-// LOCAL STORAGE, I HAD TO APPLY ALL STYLES AGAIN IN ORDER TO START WORKING AGAIN
+// REAPPLY LOCAL STORAGE LOGIC???
 if (localStorage.getItem("range", range.value) == 1) {
+    document.body.classList.add("theme-one");
     range.value = 1;
 } else if (localStorage.getItem("range", range.value) == 2) {
+    document.body.classList.add("theme-two");
     range.value = 2;
-    document.body.style.backgroundColor = "rgb(230, 230, 230)"; // main bg
-    calcDisplay.style.backgroundColor = "hsl(0, 0%, 93%)"; // calculator display
-    calcDisplay.style.color = "hsl(60, 10%, 19%)"; // calculator display color
-    themeLabel.style.color = "hsl(60, 10%, 19%)"; // theme text color
-    rangeNumber.forEach(number => {
-        number.style.color = "hsl(60, 10%, 19%)"; // numbers above the slider
-    });
-    document.querySelector("h1").style.color = "hsl(60, 10%, 19%)"; // calc
-    document.querySelector(".keys_container").style.backgroundColor = "hsl(0, 5%, 81%)"; // keyboard bg
-    document.querySelectorAll(".key").forEach(key => {
-        key.style.backgroundColor = "hsl(45, 7%, 89%)"; // key bg
-        key.style.color = "hsl(60, 10%, 19%)"; // key color
-        key.style.borderBottom = ".25rem solid hsl(35, 11%, 61%)";
-    });
-    deleteBtn.style.backgroundColor = "hsl(185, 42%, 37%)";
-    deleteBtn.style.color = "#fff";
-    deleteBtn.style.borderBottom = ".25rem solid hsl(185, 58%, 25%)";
-    resetBtn.style.backgroundColor = "hsl(185, 42%, 37%)";
-    resetBtn.style.borderBottom = ".25rem solid hsl(185, 58%, 25%)";
-    equalsBtn.style.backgroundColor = "hsl(25, 98%, 40%)";
-    equalsBtn.style.borderBottom = ".25rem solid hsl(25, 99%, 27%)";
-    equalsBtn.style.color = "#fff";
-    range.classList.remove("range");
-    range.classList.remove("range3");
-    range.classList.add("range2");
 } else if (localStorage.getItem("range", range.value) == 3) {
+    document.body.classList.add("theme-three");
     range.value = 3;
-    document.body.style.backgroundColor = "hsl(268, 75%, 9%)"; // main bg
-    calcDisplay.style.backgroundColor = "hsl(268, 71%, 12%)"; // calculator  display
-    calcDisplay.style.color = "hsl(52, 100%, 62%)"; // calculator display color
-    themeLabel.style.color = "hsl(52, 100%, 62%)"; // theme text color
-    rangeNumber.forEach(number => {
-        number.style.color = "hsl(52, 100%, 62%)"; // numbers above the slider
-    });
-    document.querySelector("h1").style.color = "hsl(52, 100%, 62%)"; // calc
-    document.querySelector(".keys_container").style.backgroundColor = "hsl(268, 71%, 12%)"; // keyboard bg
-    document.querySelectorAll(".key").forEach(key => {
-        key.style.backgroundColor = "hsl(268, 47%, 21%)"; // key bg
-        key.style.color = "hsl(52, 100%, 62%)"; // key color
-        key.style.borderBottom = ".25rem solid hsl(290, 70%, 36%)";
-    });
-    deleteBtn.style.backgroundColor = "hsl(281, 89%, 26%)";
-    deleteBtn.style.borderBottom = ".25rem solid hsl(285, 91%, 52%)";
-    deleteBtn.style.color = "#fff";
-    resetBtn.style.backgroundColor = "hsl(281, 89%, 26%)";
-    resetBtn.style.borderBottom = ".25rem solid hsl(285, 91%, 52%)";
-    resetBtn.style.color = "#fff";
-    equalsBtn.style.backgroundColor = "hsl(176, 100%, 44%)";
-    equalsBtn.style.borderBottom = ".25rem solid hsl(177, 92%, 70%)";
-    equalsBtn.style.color = "hsl(198, 20%, 13%)";
-    range.classList.remove("range");
-    range.classList.remove("range2");
-    range.classList.add("range3");
 }
 
 document.addEventListener("keypress", (e) => {

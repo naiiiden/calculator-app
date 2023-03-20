@@ -10,7 +10,7 @@ main {
         justify-content: space-between;
 
         h1 {
-            color: $reset-del-equal-text-theme1;
+            color: var(--header-color);
             font-size: 1.5rem;
         }
 
@@ -21,7 +21,7 @@ main {
             gap: 1rem;
 
             .theme-label {
-                color: $reset-del-equal-text-theme1;
+                color: var(--header-color);
                 font-size: .65rem;
             }
 
@@ -30,7 +30,7 @@ main {
                 justify-content: space-between;
 
                 span {
-                    color: $reset-del-equal-text-theme1;
+                    color: var(--header-color);
                     margin-bottom: .25rem;
                 }
             }
@@ -61,37 +61,13 @@ main {
                 width: 1.25rem;
                 height: 1.25rem;
                 border-radius: 2em;
-                background: $equal-keybg-togglebg-theme1;
+                background: var(--range-equal-bg-color);
             }
 
             &::-webkit-slider-runnable-track {
                 height: 1.25rem;
                 border-radius: 2rem;
-                background: $keypad-toggle-background-theme1;
-            }
-        }
-
-        .range2 {
-            @extend .range;
-
-            &::-webkit-slider-thumb {
-                background: $equal-keybg-togglebg-theme2;
-            }
-
-            &::-webkit-slider-runnable-track {
-                background: $keypad-toggle-background-theme2;
-            }
-        }
-
-        .range3 {
-            @extend .range;
-
-            &::-webkit-slider-thumb {
-                background: $equal-keybg-togglebg-theme3;
-            }
-
-            &::-webkit-slider-runnable-track {
-                background: $keypad-toggle-background-theme3;
+                background: var(--bg-color-2);
             }
         }
     }
@@ -99,9 +75,9 @@ main {
     .calculator_display {
         width: 288px;
         height: 61px;
-        background-color: $keypad-toggle-background-theme1;
+        background-color: var(--screen-bg);
         border: none;
-        color: $equal-text-theme1;
+        color: var(--display-text-color);
         font-family: Spartan, sans-serif;
         text-align: right;
         padding: 1rem;
@@ -110,7 +86,7 @@ main {
     }
 
     .keys_container {
-        background-color: $keypad-toggle-background-theme1;
+        background-color: var(--bg-color-2);
         border-radius: .5rem;
         padding: 1rem;
         display: flex;
@@ -126,12 +102,12 @@ main {
                 width: 3.5rem;
                 height: 3.5rem;
                 font-family: inherit;
-                color: $number-operator-text-theme1;
-                background: $number-operator-keybg-theme1;
+                color: var(--digit-key-color);
+                background: var(--digit-key-bg-color);
                 border: none;
                 border-radius: .4rem;
                 font-size: 1.25rem;
-                border-bottom: .25rem solid $number-operator-shadow-theme1;
+                border-bottom: .25rem solid var(--digit-shadow);
                 
                 &:active {
                     border-bottom: none !important;
@@ -139,10 +115,10 @@ main {
             }
 
             .delete {
-                background: $reset-del-keybg-theme1;
-                color: $reset-del-equal-text-theme1;
+                background: var(--reset-del-bg-color);
+                color: var(--reset-del-color);
                 font-size: .9rem;
-                border-bottom: .25rem solid $reset-del-shadow-theme1;
+                border-bottom: .25rem solid var(--reset-del-shadow);
             }
         }
 
@@ -151,14 +127,14 @@ main {
 
             .reset {
                 @extend .delete, .key;
-                border-bottom: .25rem solid $reset-del-shadow-theme1;
             }
 
             .equals {
                 @extend .reset;
                 width: 7.625rem;
-                background: $equal-keybg-togglebg-theme1;
-                border-bottom: .25rem solid $equal-shadow-theme1;
+                background-color: var(--range-equal-bg-color);
+                border-bottom: .25rem solid var(--equal-shadow);
+                color: var(--equals-color);
             }
         }
     }
