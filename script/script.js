@@ -9,6 +9,8 @@ const calcDisplay = document.querySelector(".calculator_display");
 const themeLabel = document.querySelector(".input_theme_index_container .theme-label");
 const rangeNumber = document.querySelectorAll(".theme_index span");
 
+console.log(rangeSlider.value);
+
 document.querySelectorAll(".number").forEach(number => {
     number.addEventListener("click", () => {
         input.textContent += number.textContent;
@@ -49,17 +51,20 @@ deleteBtn.addEventListener("click", () => {
 /* COLOR SCHEME SLIDER */
 range.addEventListener("input", () => {
     if (range.value == 1) {
-
+        document.body.classList.add("theme-one");
+        document.body.classList.remove("theme-two", "theme-three");
         // SET LOCALSTORAGE
         localStorage.setItem("range", range.value);
 
     } else if (range.value == 2) {
-
+        document.body.classList.add("theme-two");
+        document.body.classList.remove("theme-one", "theme-three");
         // SET LOCALSTORAGE
         localStorage.setItem("range", range.value);
     
     } else if (range.value == 3) {
-
+        document.body.classList.add("theme-three");
+        document.body.classList.remove("theme-one", "theme-two");
         // SET LOCALSTORAGE
         localStorage.setItem("range", range.value);
     }
@@ -67,11 +72,13 @@ range.addEventListener("input", () => {
 
 // REAPPLY LOCAL STORAGE LOGIC???
 if (localStorage.getItem("range", range.value) == 1) {
+    document.body.classList.add("theme-one");
     range.value = 1;
 } else if (localStorage.getItem("range", range.value) == 2) {
+    document.body.classList.add("theme-two");
     range.value = 2;
-
 } else if (localStorage.getItem("range", range.value) == 3) {
+    document.body.classList.add("theme-three");
     range.value = 3;
 }
 
