@@ -13,7 +13,7 @@ body {
   min-height: 100vh;
   font-family: Spartan, sans-serif;
   font-weight: 700;
-  background-color: hsl(222deg, 26%, 31%);
+  background-color: hsl(222, 26%, 31%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +36,7 @@ main header {
   justify-content: space-between;
 }
 main header h1 {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-size: 1.5rem;
 }
 main header .input_theme_index_container {
@@ -46,7 +46,7 @@ main header .input_theme_index_container {
   gap: 1rem;
 }
 main header .input_theme_index_container .theme-label {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-size: 0.65rem;
 }
 main header .input_theme_index_container .theme_index {
@@ -54,7 +54,7 @@ main header .input_theme_index_container .theme_index {
   justify-content: space-between;
 }
 main header .input_theme_index_container .theme_index span {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   margin-bottom: 0.25rem;
 }
 main header .input_theme_index_container .theme_text_container {
@@ -80,31 +80,31 @@ main header .range::-webkit-slider-thumb, main header .range3::-webkit-slider-th
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 2em;
-  background: hsl(6deg, 63%, 50%);
+  background: hsl(6, 63%, 50%);
 }
 main header .range::-webkit-slider-runnable-track, main header .range3::-webkit-slider-runnable-track, main header .range2::-webkit-slider-runnable-track {
   height: 1.25rem;
   border-radius: 2rem;
-  background: hsl(223deg, 31%, 20%);
+  background: hsl(223, 31%, 20%);
 }
 main header .range2::-webkit-slider-thumb {
-  background: hsl(25deg, 98%, 40%);
+  background: hsl(25, 98%, 40%);
 }
 main header .range2::-webkit-slider-runnable-track {
-  background: hsl(0deg, 5%, 81%);
+  background: hsl(0, 5%, 81%);
 }
 main header .range3::-webkit-slider-thumb {
-  background: hsl(176deg, 100%, 44%);
+  background: hsl(176, 100%, 44%);
 }
 main header .range3::-webkit-slider-runnable-track {
-  background: hsl(268deg, 71%, 12%);
+  background: hsl(268, 71%, 12%);
 }
 main .calculator_display {
   width: 288px;
   height: 61px;
-  background-color: hsl(223deg, 31%, 20%);
+  background-color: hsl(223, 31%, 20%);
   border: none;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-family: Spartan, sans-serif;
   text-align: right;
   padding: 1rem;
@@ -112,7 +112,7 @@ main .calculator_display {
   border-radius: 0.5rem;
 }
 main .keys_container {
-  background-color: hsl(223deg, 31%, 20%);
+  background-color: hsl(223, 31%, 20%);
   border-radius: 0.5rem;
   padding: 1rem;
   display: flex;
@@ -128,29 +128,29 @@ main .keys_container .keys_row .key, main .keys_container .reset_equals_containe
   width: 3.5rem;
   height: 3.5rem;
   font-family: inherit;
-  color: hsl(221deg, 14%, 31%);
-  background: hsl(30deg, 25%, 89%);
+  color: hsl(221, 14%, 31%);
+  background: hsl(30, 25%, 89%);
   border: none;
   border-radius: 0.4rem;
   font-size: 1.25rem;
-  border-bottom: 0.25rem solid hsl(28deg, 16%, 65%);
+  border-bottom: 0.25rem solid hsl(28, 16%, 65%);
 }
 main .keys_container .keys_row .key:active, main .keys_container .reset_equals_container .key:active, main .keys_container .reset_equals_container .reset:active, main .keys_container .reset_equals_container .equals:active {
   border-bottom: none !important;
 }
 main .keys_container .keys_row .delete, main .keys_container .reset_equals_container .delete, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
-  background: hsl(225deg, 21%, 49%);
-  color: hsl(0deg, 0%, 100%);
+  background: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
   font-size: 0.9rem;
-  border-bottom: 0.25rem solid hsl(224deg, 28%, 35%);
+  border-bottom: 0.25rem solid hsl(224, 28%, 35%);
 }
 main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
-  border-bottom: 0.25rem solid hsl(224deg, 28%, 35%);
+  border-bottom: 0.25rem solid hsl(224, 28%, 35%);
 }
 main .keys_container .reset_equals_container .equals {
   width: 7.625rem;
-  background: hsl(6deg, 63%, 50%);
-  border-bottom: 0.25rem solid hsl(6deg, 70%, 34%);
+  background: hsl(6, 63%, 50%);
+  border-bottom: 0.25rem solid hsl(6, 70%, 34%);
 }
 
 @media screen and (min-width: 768px) {
