@@ -79,8 +79,9 @@ if (localStorage.getItem("range", range.value) == 1) {
     range.value = 3;
 }
 
-document.addEventListener("keypress", (e) => {
+document.addEventListener("keydown", (e) => {
     switch (e.keyCode) {
+        case 8: input.textContent = input.textContent.substring(0, input.textContent.length - 1);
         case 13: num2 = parseFloat(input.textContent.substring(input.textContent.indexOf(operator) + 1));
         switch (operator) {
             case "+": input.textContent = num1 + num2; num1 += num2; break;
