@@ -1,5 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
-/*COLOR SCHEME 1*/
+.theme-one {
+  --bg-color: hsl(222, 26%, 31%);
+  --header-color: hsl(0, 0%, 100%);
+  --range-equal-color: hsl(6, 63%, 50%);
+  --bg-color-2: hsl(223, 31%, 20%);
+  --reset-del-color: hsl(225, 21%, 49%);
+}
+
+.theme-two {
+  --bg-color: hsl(0, 0%, 90%);
+  --header-color: hsl(60, 10%, 19%);
+  --range-equal-color: hsl(25, 98%, 40%);
+  --bg-color-2: hsl(0, 5%, 81%);
+  --reset-del-color: hsl(185, 42%, 37%);
+}
+
+.theme-three {
+  --bg-color: hsl(268, 75%, 9%);
+  --header-color: hsl(52, 100%, 62%);
+  --range-equal-color: hsl(176, 100%, 44%);
+  --bg-color-2: hsl(268, 71%, 12%);
+  --reset-del-color: hsl(281, 89%, 26%);
+}
+
 /*COLOR SCHEME 2*/
 /*COLOR SCHEME 3*/
 * {
@@ -13,7 +36,7 @@ body {
   min-height: 100vh;
   font-family: Spartan, sans-serif;
   font-weight: 700;
-  background-color: hsl(222, 26%, 31%);
+  background-color: var(--bg-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +59,7 @@ main header {
   justify-content: space-between;
 }
 main header h1 {
-  color: hsl(0, 0%, 100%);
+  color: var(--header-color);
   font-size: 1.5rem;
 }
 main header .input_theme_index_container {
@@ -46,7 +69,7 @@ main header .input_theme_index_container {
   gap: 1rem;
 }
 main header .input_theme_index_container .theme-label {
-  color: hsl(0, 0%, 100%);
+  color: var(--header-color);
   font-size: 0.65rem;
 }
 main header .input_theme_index_container .theme_index {
@@ -54,7 +77,7 @@ main header .input_theme_index_container .theme_index {
   justify-content: space-between;
 }
 main header .input_theme_index_container .theme_index span {
-  color: hsl(0, 0%, 100%);
+  color: var(--header-color);
   margin-bottom: 0.25rem;
 }
 main header .input_theme_index_container .theme_text_container {
@@ -67,7 +90,7 @@ main header .input_theme_index_container .theme_text_container div {
   justify-content: space-between;
   gap: 1.35rem;
 }
-main header .range, main header .range3, main header .range2 {
+main header .range {
   width: 4rem;
   height: 1rem;
   -webkit-appearance: none;
@@ -75,34 +98,22 @@ main header .range, main header .range3, main header .range2 {
   display: flex;
   align-items: center;
 }
-main header .range::-webkit-slider-thumb, main header .range3::-webkit-slider-thumb, main header .range2::-webkit-slider-thumb {
+main header .range::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 2em;
-  background: hsl(6, 63%, 50%);
+  background: var(--range-equal-color);
 }
-main header .range::-webkit-slider-runnable-track, main header .range3::-webkit-slider-runnable-track, main header .range2::-webkit-slider-runnable-track {
+main header .range::-webkit-slider-runnable-track {
   height: 1.25rem;
   border-radius: 2rem;
-  background: hsl(223, 31%, 20%);
-}
-main header .range2::-webkit-slider-thumb {
-  background: hsl(25, 98%, 40%);
-}
-main header .range2::-webkit-slider-runnable-track {
-  background: hsl(0, 5%, 81%);
-}
-main header .range3::-webkit-slider-thumb {
-  background: hsl(176, 100%, 44%);
-}
-main header .range3::-webkit-slider-runnable-track {
-  background: hsl(268, 71%, 12%);
+  background: var(--bg-color-2);
 }
 main .calculator_display {
   width: 288px;
   height: 61px;
-  background-color: hsl(223, 31%, 20%);
+  background-color: var(--bg-color-2);
   border: none;
   color: hsl(0, 0%, 100%);
   font-family: Spartan, sans-serif;
@@ -112,7 +123,7 @@ main .calculator_display {
   border-radius: 0.5rem;
 }
 main .keys_container {
-  background-color: hsl(223, 31%, 20%);
+  background-color: var(--bg-color-2);
   border-radius: 0.5rem;
   padding: 1rem;
   display: flex;
@@ -139,7 +150,7 @@ main .keys_container .keys_row .key:active, main .keys_container .reset_equals_c
   border-bottom: none !important;
 }
 main .keys_container .keys_row .delete, main .keys_container .reset_equals_container .delete, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
-  background: hsl(225, 21%, 49%);
+  background: var(--reset-del-color);
   color: hsl(0, 0%, 100%);
   font-size: 0.9rem;
   border-bottom: 0.25rem solid hsl(224, 28%, 35%);
@@ -149,7 +160,7 @@ main .keys_container .reset_equals_container .reset, main .keys_container .reset
 }
 main .keys_container .reset_equals_container .equals {
   width: 7.625rem;
-  background: hsl(6, 63%, 50%);
+  background-color: var(--range-equal-color);
   border-bottom: 0.25rem solid hsl(6, 70%, 34%);
 }
 

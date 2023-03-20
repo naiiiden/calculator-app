@@ -1,6 +1,5 @@
 let num1, num2, operator;
 let input = document.querySelector("#input");
-
 const rangeSlider = document.querySelector("#range");
 const deleteBtn = document.querySelector(".delete");
 const resetBtn = document.querySelector(".reset");
@@ -8,8 +7,6 @@ const equalsBtn = document.querySelector(".equals");
 const calcDisplay = document.querySelector(".calculator_display");
 const themeLabel = document.querySelector(".input_theme_index_container .theme-label");
 const rangeNumber = document.querySelectorAll(".theme_index span");
-
-console.log(rangeSlider.value);
 
 document.querySelectorAll(".number").forEach(number => {
     number.addEventListener("click", () => {
