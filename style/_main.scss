@@ -61,7 +61,7 @@ main {
                 width: 1.25rem;
                 height: 1.25rem;
                 border-radius: 2em;
-                background: var(--range-equal-color);
+                background: var(--range-equal-bg-color);
             }
 
             &::-webkit-slider-runnable-track {
@@ -75,9 +75,9 @@ main {
     .calculator_display {
         width: 288px;
         height: 61px;
-        background-color: var(--bg-color-2);
+        background-color: var(--screen-bg);
         border: none;
-        color: $equal-text-theme1;
+        color: var(--display-text-color);
         font-family: Spartan, sans-serif;
         text-align: right;
         padding: 1rem;
@@ -102,12 +102,12 @@ main {
                 width: 3.5rem;
                 height: 3.5rem;
                 font-family: inherit;
-                color: $number-operator-text-theme1;
-                background: $number-operator-keybg-theme1;
+                color: var(--digit-key-color);
+                background: var(--digit-key-bg-color);
                 border: none;
                 border-radius: .4rem;
                 font-size: 1.25rem;
-                border-bottom: .25rem solid $number-operator-shadow-theme1;
+                border-bottom: .25rem solid var(--digit-shadow);
                 
                 &:active {
                     border-bottom: none !important;
@@ -115,10 +115,10 @@ main {
             }
 
             .delete {
-                background: var(--reset-del-color);
-                color: $reset-del-equal-text-theme1;
+                background: var(--reset-del-bg-color);
+                color: var(--reset-del-color);
                 font-size: .9rem;
-                border-bottom: .25rem solid $reset-del-shadow-theme1;
+                border-bottom: .25rem solid var(--reset-del-shadow);
             }
         }
 
@@ -127,14 +127,14 @@ main {
 
             .reset {
                 @extend .delete, .key;
-                border-bottom: .25rem solid $reset-del-shadow-theme1;
             }
 
             .equals {
                 @extend .reset;
                 width: 7.625rem;
-                background-color: var(--range-equal-color);
-                border-bottom: .25rem solid $equal-shadow-theme1;
+                background-color: var(--range-equal-bg-color);
+                border-bottom: .25rem solid var(--equal-shadow);
+                color: var(--equals-color);
             }
         }
     }

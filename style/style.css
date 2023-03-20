@@ -1,30 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
 .theme-one {
   --bg-color: hsl(222, 26%, 31%);
-  --header-color: hsl(0, 0%, 100%);
-  --range-equal-color: hsl(6, 63%, 50%);
   --bg-color-2: hsl(223, 31%, 20%);
-  --reset-del-color: hsl(225, 21%, 49%);
+  --header-color: hsl(0, 0%, 100%);
+  --range-equal-bg-color: hsl(6, 63%, 50%);
+  --reset-del-bg-color: hsl(225, 21%, 49%);
+  --screen-bg: hsl(224, 36%, 15%);
+  --equals-color: hsl(0, 0%, 100%);
+  --digit-key-color: hsl(221, 14%, 31%);
+  --display-text-color: hsl(0, 0%, 100%);
+  --reset-del-color: hsl(0, 0%, 100%);
+  --digit-key-bg-color: hsl(30, 25%, 89%);
+  --reset-del-shadow: hsl(224, 28%, 35%);
+  --equal-shadow: hsl(6, 70%, 34%);
+  --digit-shadow: hsl(28, 16%, 65%);
 }
 
 .theme-two {
   --bg-color: hsl(0, 0%, 90%);
-  --header-color: hsl(60, 10%, 19%);
-  --range-equal-color: hsl(25, 98%, 40%);
   --bg-color-2: hsl(0, 5%, 81%);
-  --reset-del-color: hsl(185, 42%, 37%);
+  --header-color: hsl(60, 10%, 19%);
+  --range-equal-bg-color: hsl(25, 98%, 40%);
+  --reset-del-bg-color: hsl(185, 42%, 37%);
+  --screen-bg: hsl(0, 0%, 93%);
+  --equals-color: hsl(0, 0%, 100%);
+  --digit-key-color: hsl(60, 10%, 19%);
+  --display-text-color: hsl(60, 10%, 19%);
+  --reset-del-color: hsl(0, 0%, 100%);
+  --digit-key-bg-color: hsl(45, 7%, 89%);
+  --reset-del-shadow: hsl(185, 58%, 25%);
+  --equal-shadow: hsl(25, 99%, 27%);
+  --digit-shadow: hsl(35, 11%, 61%);
 }
 
 .theme-three {
   --bg-color: hsl(268, 75%, 9%);
-  --header-color: hsl(52, 100%, 62%);
-  --range-equal-color: hsl(176, 100%, 44%);
   --bg-color-2: hsl(268, 71%, 12%);
-  --reset-del-color: hsl(281, 89%, 26%);
+  --header-color: hsl(52, 100%, 62%);
+  --range-equal-bg-color: hsl(176, 100%, 44%);
+  --reset-del-bg-color: hsl(281, 89%, 26%);
+  --screen-bg: hsl(268, 71%, 12%);
+  --equals-color: hsl(198, 20%, 13%);
+  --digit-key-color: hsl(52, 100%, 62%);
+  --display-text-color: hsl(52, 100%, 62%);
+  --reset-del-color: hsl(0, 0%, 100%);
+  --digit-key-bg-color: hsl(268, 47%, 21%);
+  --reset-del-shadow: hsl(285, 91%, 52%);
+  --equal-shadow: hsl(177, 92%, 70%);
+  --digit-shadow: hsl(290, 70%, 36%);
 }
 
-/*COLOR SCHEME 2*/
-/*COLOR SCHEME 3*/
 * {
   margin: 0;
   padding: 0;
@@ -103,7 +128,7 @@ main header .range::-webkit-slider-thumb {
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 2em;
-  background: var(--range-equal-color);
+  background: var(--range-equal-bg-color);
 }
 main header .range::-webkit-slider-runnable-track {
   height: 1.25rem;
@@ -113,9 +138,9 @@ main header .range::-webkit-slider-runnable-track {
 main .calculator_display {
   width: 288px;
   height: 61px;
-  background-color: var(--bg-color-2);
+  background-color: var(--screen-bg);
   border: none;
-  color: hsl(0, 0%, 100%);
+  color: var(--display-text-color);
   font-family: Spartan, sans-serif;
   text-align: right;
   padding: 1rem;
@@ -139,29 +164,27 @@ main .keys_container .keys_row .key, main .keys_container .reset_equals_containe
   width: 3.5rem;
   height: 3.5rem;
   font-family: inherit;
-  color: hsl(221, 14%, 31%);
-  background: hsl(30, 25%, 89%);
+  color: var(--digit-key-color);
+  background: var(--digit-key-bg-color);
   border: none;
   border-radius: 0.4rem;
   font-size: 1.25rem;
-  border-bottom: 0.25rem solid hsl(28, 16%, 65%);
+  border-bottom: 0.25rem solid var(--digit-shadow);
 }
 main .keys_container .keys_row .key:active, main .keys_container .reset_equals_container .key:active, main .keys_container .reset_equals_container .reset:active, main .keys_container .reset_equals_container .equals:active {
   border-bottom: none !important;
 }
 main .keys_container .keys_row .delete, main .keys_container .reset_equals_container .delete, main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
-  background: var(--reset-del-color);
-  color: hsl(0, 0%, 100%);
+  background: var(--reset-del-bg-color);
+  color: var(--reset-del-color);
   font-size: 0.9rem;
-  border-bottom: 0.25rem solid hsl(224, 28%, 35%);
-}
-main .keys_container .reset_equals_container .reset, main .keys_container .reset_equals_container .equals {
-  border-bottom: 0.25rem solid hsl(224, 28%, 35%);
+  border-bottom: 0.25rem solid var(--reset-del-shadow);
 }
 main .keys_container .reset_equals_container .equals {
   width: 7.625rem;
-  background-color: var(--range-equal-color);
-  border-bottom: 0.25rem solid hsl(6, 70%, 34%);
+  background-color: var(--range-equal-bg-color);
+  border-bottom: 0.25rem solid var(--equal-shadow);
+  color: var(--equals-color);
 }
 
 @media screen and (min-width: 768px) {
