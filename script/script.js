@@ -81,6 +81,7 @@ if (localStorage.getItem("range", range.value) == 1) {
 
 document.addEventListener("keydown", (e) => {
     switch (e.key) {
+        // broken?
         case "Backspace": input.textContent = input.textContent.substring(0, input.textContent.length - 1);
         case "Enter": num2 = parseFloat(input.textContent.substring(input.textContent.indexOf(operator) + 1));
         switch (operator) {
@@ -96,6 +97,8 @@ document.addEventListener("keydown", (e) => {
         case "-": operator = "-"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent += operator; break;
         case "/": operator = "/"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent += operator; break;
         case "^": operator = "^"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent += operator; break;
+        /* DECIMAL POINT */
+        case ".": input.textContent += "."; break;
         /*NUMBERS*/
         case "0": input.textContent += 0; break;
         case "1": input.textContent += 1; break;
