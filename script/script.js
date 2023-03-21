@@ -7,7 +7,7 @@ const equalsBtn = document.querySelector(".equals");
 const calcDisplay = document.querySelector(".calculator_display");
 const themeLabel = document.querySelector(".input_theme_index_container .theme-label");
 const rangeNumber = document.querySelectorAll(".theme_index span");
-let operators = ["+", "-", "*", "/", "^"];
+let operators = ["+", "-", "x", "/", "^"];
 
 document.querySelectorAll(".number").forEach(number => {
     number.addEventListener("click", () => {
@@ -18,7 +18,7 @@ document.querySelectorAll(".number").forEach(number => {
 document.querySelectorAll(".operator").forEach(operate => {
     operate.addEventListener("click", () => {
         if (num1 === undefined) num1 = parseFloat(input.textContent);
-
+        
         let inputLastChar = input.textContent.slice(-1);
         if (!operators.includes(inputLastChar) && input.textContent.length > 0) {
             operator = operate.textContent;
