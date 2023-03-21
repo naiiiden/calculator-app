@@ -17,8 +17,12 @@ document.querySelectorAll(".number").forEach(number => {
 document.querySelectorAll(".operator").forEach(operate => {
     operate.addEventListener("click", () => {
         if (num1 === undefined) num1 = parseFloat(input.textContent);
-        operator = operate.textContent;
-        input.textContent += operator;
+
+        let inputLastChar = input.textContent.slice(-1);
+        if (inputLastChar !== "+" && inputLastChar !== "-" && inputLastChar !== "x" && inputLastChar !== "/") {
+            operator = operate.textContent;
+            input.textContent += operator;
+        }
     });
 });
 
