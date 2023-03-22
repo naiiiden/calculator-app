@@ -40,7 +40,7 @@ equalsBtn.addEventListener("click", () => {
         case "+": input.textContent = num1 + num2; num1 += num2; break;
         case "-": input.textContent = num1 - num2; num1 -= num2; break;
         case "x": input.textContent = num1 * num2; num1 *= num2; break;
-        case "/": input.textContent = num1 / num2; if (num2 === 0) input.textContent = undefined; num1 /= num2; break;
+        case "/": input.textContent = num1 / num2; if (num2 === 0) input.textContent = "Infinity"; num1 /= num2; break;
         case "^": input.textContent = num1 ** num2; num1 **= num2; break;
     }
 
@@ -102,7 +102,7 @@ document.addEventListener("keydown", (e) => {
             case "+": input.textContent = num1 + num2; num1 += num2; break;
             case "-": input.textContent = num1 - num2; num1 -= num2; break;
             case "x": input.textContent = num1 * num2; num1 *= num2; break;
-            case "/": input.textContent = num1 / num2; if (num2 === 0) input.textContent = undefined; num1 /= num2; break;
+            case "/": input.textContent = num1 / num2; if (num2 === 0) input.textContent = "Infinity"; num1 /= num2; break;
             case "^": input.textContent = num1 ** num2; num1 **= num2; break;
         }; break;
         /*OPERATORS*/
