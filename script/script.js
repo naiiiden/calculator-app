@@ -37,6 +37,9 @@ equalsBtn.addEventListener("click", () => {
         case "/": input.textContent = num1 / num2; if (num2 === 0) input.textContent = undefined; num1 /= num2; break;
         case "^": input.textContent = num1 ** num2; num1 **= num2; break;
     }
+
+    num2 = undefined;
+    operator = undefined;
 });
 
 resetBtn.addEventListener("click", () => {
@@ -87,8 +90,8 @@ if (localStorage.getItem("range", range.value) == 1) {
 document.addEventListener("keydown", (e) => {
     switch (e.key) {
         // broken?
-        case "Backspace": input.textContent = input.textContent.substring(0, input.textContent.length - 1);
-        case "Enter": num2 = parseFloat(input.textContent.substring(input.textContent.indexOf(operator) + 1));
+        case "Backspace": input.textContent = input.textContent.substring(0, input.textContent.length - 1); break;
+        case "Enter": num2 = parseFloat(input.textContent.substring(input.textContent.indexOf(operator) + 1)); 
         switch (operator) {
             case "+": input.textContent = num1 + num2; num1 += num2; break;
             case "-": input.textContent = num1 - num2; num1 -= num2; break;
