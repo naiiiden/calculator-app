@@ -15,12 +15,18 @@ document.querySelectorAll(".number").forEach(number => {
     });
 });
 
+document.querySelector("#float").addEventListener("click", () => {
+    if (!input.textContent.includes(".")) {
+      input.textContent += ".";
+    }
+});
+
 document.querySelectorAll(".operator").forEach(operate => {
     operate.addEventListener("click", () => {
         if (num1 === undefined) num1 = parseFloat(input.textContent);
         
         let inputLastChar = input.textContent.slice(-1);
-        if (!operators.includes(inputLastChar) && input.textContent.length > 0) {
+        if (!operators.includes(inputLastChar) && inputLastChar !== "." && input.textContent.length > 0) {
             operator = operate.textContent;
             input.textContent += operator;
         }
