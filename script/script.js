@@ -59,29 +59,24 @@ deleteBtn.addEventListener("click", () => {
     input.textContent = input.textContent.substring(0, input.textContent.length - 1);
 });
 
-/* COLOR SCHEME SLIDER */
+/* COLOR SCHEME SLIDER  + LOCAL STORAGE*/
 range.addEventListener("input", () => {
     if (range.value == 1) {
         document.body.classList.add("theme-one");
         document.body.classList.remove("theme-two", "theme-three");
-        // SET LOCALSTORAGE
         localStorage.setItem("range", range.value);
-
     } else if (range.value == 2) {
         document.body.classList.add("theme-two");
         document.body.classList.remove("theme-one", "theme-three");
-        // SET LOCALSTORAGE
         localStorage.setItem("range", range.value);
     
     } else if (range.value == 3) {
         document.body.classList.add("theme-three");
         document.body.classList.remove("theme-one", "theme-two");
-        // SET LOCALSTORAGE
         localStorage.setItem("range", range.value);
     }
 });
 
-// REAPPLY LOCAL STORAGE LOGIC???
 if (localStorage.getItem("range", range.value) == 1) {
     document.body.classList.add("theme-one");
     range.value = 1;
