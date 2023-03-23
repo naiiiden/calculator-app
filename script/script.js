@@ -16,8 +16,8 @@ document.querySelectorAll(".number").forEach(number => {
 });
 
 document.querySelector("#float").addEventListener("click", () => {
-    if (!input.textContent.includes(".")) {
-      input.textContent += ".";
+    if (input.textContent.slice(-1) !== ".") {
+        input.textContent += ".";
     }
 });
 
