@@ -7,7 +7,7 @@ const equalsBtn = document.querySelector(".equals");
 const calcDisplay = document.querySelector(".calculator_display");
 const themeLabel = document.querySelector(".input_theme_index_container .theme-label");
 const rangeNumber = document.querySelectorAll(".theme_index span");
-const operators = ["+", "-", "x", "/", "^", "."];
+const operators = ["+", "-", "x", "/", "^"];
 
 document.querySelectorAll(".number").forEach(number => {
     number.addEventListener("click", () => {
@@ -25,8 +25,10 @@ document.querySelectorAll(".operator").forEach(operate => {
     operate.addEventListener("click", () => {
         if (num1 === undefined) num1 = parseFloat(input.textContent);
         
+        console.log('after operator num1', num1);
+
         let inputLastChar = input.textContent.slice(-1);
-        if (!operators.includes(inputLastChar) && inputLastChar !== "." && input.textContent.length > 0) {
+        if (!operators.includes(inputLastChar) && input.textContent.length > 0) {
             operator = operate.textContent;
             input.textContent += operator;
         }
@@ -36,6 +38,9 @@ document.querySelectorAll(".operator").forEach(operate => {
 equalsBtn.addEventListener("click", () => {
     num2 = parseFloat(input.textContent.substring(input.textContent.indexOf(operator) + 1));
     
+    console.log('after equal num1', num1);
+    console.log('after equal num2', num2);
+
     switch (operator) {
         case "+": input.textContent = num1 + num2; num1 += num2; break;
         case "-": input.textContent = num1 - num2; num1 -= num2; break;
