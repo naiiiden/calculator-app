@@ -97,20 +97,26 @@ document.addEventListener("keydown", (e) => {
     switch (e.key) {
         // broken?
         case "Backspace": input.textContent = input.textContent.substring(0, input.textContent.length - 1); break;
-        case "Enter": num2 = parseFloat(input.textContent.substring(input.textContent.indexOf(operator) + 1)); 
-        switch (operator) {
-            case "+": input.textContent = num1 + num2; num1 += num2; break;
-            case "-": input.textContent = num1 - num2; num1 -= num2; break;
-            case "x": input.textContent = num1 * num2; num1 *= num2; break;
-            case "/": input.textContent = num1 / num2; if (num2 === 0) input.textContent = "Infinity"; num1 /= num2; break;
-            case "^": input.textContent = num1 ** num2; num1 **= num2; break;
-        }; break;
+        case "Enter": 
+            if (operator !== undefined) {
+                num2 = parseFloat(input.textContent.substring(input.textContent.indexOf(operator) + 1));
+                switch (operator) {
+                    case "+": input.textContent = num1 + num2; num1 += num2; break;
+                    case "-": input.textContent = num1 - num2; num1 -= num2; break;
+                    case "x": input.textContent = num1 * num2; num1 *= num2; break;
+                    case "/": input.textContent = num1 / num2; if (num2 === 0) input.textContent = "Infinity"; num1 /= num2; break;
+                    case "^": input.textContent = num1 ** num2; num1 **= num2; break;
+                }
+                num2 = undefined;
+                operator = undefined;
+            }
+        break;
         /*OPERATORS*/
-        case "*": operator = "x"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent += operator; break;
-        case "+": operator = "+"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent += operator; break;
-        case "-": operator = "-"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent += operator; break;
-        case "/": operator = "/"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent += operator; break;
-        case "^": operator = "^"; if (num1 === undefined) num1 = parseFloat(input.textContent); input.textContent += operator; break;
+        case "*": operator = "x"; num1 = parseFloat(input.textContent); input.textContent += operator; break;
+        case "+": operator = "+"; num1 = parseFloat(input.textContent); input.textContent += operator; break;
+        case "-": operator = "-"; num1 = parseFloat(input.textContent); input.textContent += operator; break;
+        case "/": operator = "/"; num1 = parseFloat(input.textContent); input.textContent += operator; break;
+        case "^": operator = "^"; num1 = parseFloat(input.textContent); input.textContent += operator; break;
         /* DECIMAL POINT */
         case ".": input.textContent += "."; break;
         /*NUMBERS*/
