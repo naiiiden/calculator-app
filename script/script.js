@@ -112,11 +112,19 @@ document.addEventListener("keydown", (e) => {
             }
         break;
         /*OPERATORS*/
-        case "*": operator = "x"; num1 = parseFloat(input.textContent); input.textContent += operator; break;
-        case "+": operator = "+"; num1 = parseFloat(input.textContent); input.textContent += operator; break;
-        case "-": operator = "-"; num1 = parseFloat(input.textContent); input.textContent += operator; break;
-        case "/": operator = "/"; num1 = parseFloat(input.textContent); input.textContent += operator; break;
-        case "^": operator = "^"; num1 = parseFloat(input.textContent); input.textContent += operator; break;
+        case "*":
+        case "+":
+        case "-":
+        case "/":
+        case "^":
+            // prevents adding another operator if the last character is also an operator
+            if (input.textContent.length > 0 && "+-x/^".includes(input.textContent.slice(-1))) {
+                break;
+            }
+            operator = e.key === "*" ? "x" : e.key;
+            num1 = parseFloat(input.textContent);
+            input.textContent += operator;
+            break;
         /* DECIMAL POINT */
         case ".": input.textContent += "."; break;
         /*NUMBERS*/
