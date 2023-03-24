@@ -90,7 +90,6 @@ if (localStorage.getItem("range", range.value) == 1) {
 
 document.addEventListener("keydown", (e) => {
     switch (e.key) {
-        // broken?
         case "Backspace": input.textContent = input.textContent.substring(0, input.textContent.length - 1); break;
         case "Enter": 
             if (operator !== undefined) {
@@ -133,11 +132,9 @@ document.addEventListener("keydown", (e) => {
         case "7": input.textContent += 7; break;
         case "8": input.textContent += 8; break;
         case "9": input.textContent += 9; break;
-        /*EQUALS*/
-        /*RESET AND DEL*/
-        // EXPONENTIATION OPERATOR IS HERE SO I DON'T BREAK THE CASE ORDER
-        // ?????? i'll figure out what these two cases are
-        case 99: num1 = undefined; num2 = undefined; operator = undefined; input.textContent = ""; break;
-        case 127: input.textContent = ""; break;
+        /* RESEt */
+        case "Delete":
+        case "C":
+        case "c": num1 = undefined; num2 = undefined; operator = undefined; input.textContent = ""; break;
     }
 });
